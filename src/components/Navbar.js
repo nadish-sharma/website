@@ -1,6 +1,7 @@
 import "./NavbarStyles.css";
 import { MenuItems } from "./MenuItems";
 import React, {useState} from "react";
+import { Link } from "react-router-dom";
 function Navbar () {
     
     //We made use of useEffect hook to get updated state value//
@@ -42,9 +43,9 @@ function Navbar () {
                         {MenuItems.map((item, index) => {
                         return (
                         <li key={index}>
-                            <a className={item.cName} href={item.url}>
+                            <Link className={item.cName} to={item.url}>
                                 <i className={item.icon}></i>{item.title}
-                            </a>
+                            </Link>
                         </li>
                     );
                 })}
@@ -52,7 +53,7 @@ function Navbar () {
             </ul>
         </nav>
 
-    )
+    );
 }
 
 export default Navbar;
