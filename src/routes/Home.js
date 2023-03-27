@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Major from "../components/Major"
+import AboutImg from '../images/1.jpg'
 import React from 'react';
 function Home() {
     return(
@@ -7,7 +8,7 @@ function Home() {
         <Navbar />
         <Major 
             cName="major"
-            majorImg="https://hips.hearstapps.com/hmg-prod/images/alpe-di-siusi-sunrise-with-sassolungo-or-langkofel-royalty-free-image-1623254127.jpg"
+            majorImg={AboutImg}
             title="Book your ticket now!"
             text="Choose a travel destination"
             btnClass="show"
